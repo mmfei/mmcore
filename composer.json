@@ -14,7 +14,7 @@
     },
     "autoload": {
         "files": [
-            "src/MmClobal.php",
+            "src/MmGlobal.php",
             "src/Autoload.php"
         ],
         "psr-4": {
