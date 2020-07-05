@@ -196,15 +196,15 @@ class Mm
 	{
 		$arrIncludeMap = include MM_CORE_ROOT .'/MmAutoLoadConfig.php'; 
 		include MM_CORE_ROOT.'/libs/MmImport.php';
-		MmImport::addMapByArray($arrIncludeMap);
+		\Mm\Libs\MmImport::addMapByArray($arrIncludeMap);
 		foreach($arrIncludeMap as $k => $v)
 		{
-			MmImport::includeFile($v);
+			\Mm\Libs\MmImport::includeFile($v);
 		}
 		$arrIncludeFile = self::getByKey('autoIncludeFile');
 		if($arrIncludeFile && is_array($arrIncludeFile))
 			foreach($arrIncludeFile as $key => $file)
-				MmImport::includeFile($file);
+			\Mm\Libs\MmImport::includeFile($file);
 		spl_autoload_register(array('MmImport','autoLoad',));
 	}
 	/**
