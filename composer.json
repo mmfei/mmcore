@@ -1,0 +1,24 @@
+{
+    "name": "mm/core",
+    "description": "this is php framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mmfei",
+            "email": "wlfkongl@163.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "files": [
+            "src/MmClobal.php",
+            "src/Autoload.php"
+        ],
+        "psr-4": {
+            "Mm\\": "src/"
+        }
+    }
+}
